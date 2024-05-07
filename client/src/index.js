@@ -7,6 +7,7 @@ import globalReducer from "state";
 import { Provider } from 'react-redux';
 
 
+
 export const store = configureStore({
   reducer:{
     global: globalReducer,
