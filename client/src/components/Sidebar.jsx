@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box, Divider, Drawer, Icon, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, typography, useTheme } from "@mui/material";
-import { SettingsOutlined, ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, ReceiptLongOutlined, PublicOutlined, PointOfSaleOutlined, TodayOutlined, CalendarViewMonthOutlined, AdminPanelSettingsOutlined, TrendingUpOutlined, PieChartOutline, Home, CalendarMonthOutlined } from '@mui/icons-material';
+import { Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme } from "@mui/material";
+import {  ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, ReceiptLongOutlined, PublicOutlined, PointOfSaleOutlined, TodayOutlined, AdminPanelSettingsOutlined, TrendingUpOutlined, PieChartOutline, CalendarMonthOutlined } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FlexBetween from './FlexBetween';
-import profileImage from "assests/profile.jpeg"
+// import profileImage from "assests/profile.jpeg"
 
 
 const navItems = [

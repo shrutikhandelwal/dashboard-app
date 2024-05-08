@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import { LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search, SettingsOutlined, ArrowDropDownOutlined} from '@mui/icons-material';
+import React from 'react';
+import { LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search, SettingsOutlined} from '@mui/icons-material';
 import FlexBetween from './FlexBetween';
 import { useDispatch } from 'react-redux';
 import {setTheme} from 'state';
-import profileImage from "assests/profile.jpeg";
+// import profileImage from "assests/profile.jpeg";
 import { AppBar, IconButton, InputBase, Toolbar, useTheme } from '@mui/material';
 
 export const Navbar = ({isSidebarOpen, setIsSidebarOpen}) => {
