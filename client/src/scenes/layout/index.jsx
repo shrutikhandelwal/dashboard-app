@@ -12,13 +12,19 @@ export const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
   const { data } = useGetUserQuery(userId);
-  console.log(data)
 
   return ( 
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
-      <Sidebar isNonMobile={isNonMobile} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} drawerWidth="250px" />
-      <Box>
+      <Sidebar 
+      user={ data || {} } 
+      // If data is loading and undefined we can send empty object to avoid breaking our app
+      isNonMobile={isNonMobile}
+      isSidebarOpen={isSidebarOpen}
+      setIsSidebarOpen={setIsSidebarOpen} 
+      drawerWidth="250px" />
+      <Box flexGrow={1}>
         <Navbar 
+        user={ data || {} } 
         isSidebarOpen={isSidebarOpen} 
         setIsSidebarOpen={setIsSidebarOpen} 
         />
