@@ -11,11 +11,12 @@ export const getProducts = async (req, res) => {
         productId: product._id
       })
       return {
-        ...product.doc,
+        ...product._doc,
         stat,
       }
     })
    )
+   console.log(productWithStats)
    res.status(200).json(productWithStats);
   } catch(error) {
     res.status(404).json({message: error.message})
