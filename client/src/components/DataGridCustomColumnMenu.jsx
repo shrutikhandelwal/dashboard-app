@@ -1,15 +1,21 @@
-import React from 'react'
-import { 
+import {
   GridColumnMenuContainer,
-  GridFilterMenuItem,
-  HideGridColmenuItem,
-} from "@mui/x-data-grid"
+  GridColumnMenuFilterItem,
+  GridColumnMenuHideItem,
+} from "@mui/x-data-grid";
 
-const CustomColumnMenu = (props) => {
-  const { hideMenu, currentColumn, open } = props; 
+export const CustomColumnMenu = (props) => {
+  const { hideMenu, currentColumn, open } = props;
   return (
-    <div>DataGridCustomColumnMenu</div>
-  )
-}
+    <GridColumnMenuContainer
+      hideMenu={hideMenu}
+      currentColumn={currentColumn}
+      open={open}
+    >
+      <GridColumnMenuFilterItem onClick={hideMenu} column={currentColumn} />
+      <GridColumnMenuHideItem onClick={hideMenu} column={currentColumn} />
+    </GridColumnMenuContainer>
+  );
+};
 
-export default CustomColumnMenu
+export default CustomColumnMenu;
