@@ -14,7 +14,7 @@ import {
 import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
 
-const Product = ({
+export const Product = ({
   _id,
   name,
   description,
